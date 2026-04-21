@@ -1,65 +1,74 @@
-import Image from "next/image";
+import Link from "next/link";
+import { tools, articles } from "@/lib/tools-data";
+import AdSlot from "@/components/ui/AdSlot";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Hero */}
+      <section className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-text dark:text-text-dark mb-4">
+          Free Online <span className="text-primary">Percentage Calculator</span> Suite
+        </h1>
+        <p className="text-lg text-text-light dark:text-text-dark-muted max-w-2xl mx-auto">
+          Calculate percentages, percentage change, percentage difference, convert fractions, and split tips — all free, all instant, all private. No signup required.
+        </p>
+      </section>
+
+      {/* Tools Grid */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold text-text dark:text-text-dark mb-6 text-center">Percentage Calculators & Converters</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tools.map((tool) => (
+            <Link
+              key={tool.slug}
+              href={`/${tool.slug}`}
+              className="card group hover:border-primary dark:hover:border-primary-light transition-all duration-200 hover:-translate-y-1"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              <div className="text-4xl mb-3">{tool.icon}</div>
+              <h3 className="text-xl font-bold text-text dark:text-text-dark mb-2 group-hover:text-primary transition-colors">
+                {tool.name}
+              </h3>
+              <p className="text-sm text-text-light dark:text-text-dark-muted">{tool.description}</p>
+              <span className="inline-block mt-4 text-sm font-semibold text-primary group-hover:underline">
+                Use Calculator →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <AdSlot label="Homepage Ad" />
+
+      {/* Articles Section */}
+      <section className="mt-16 mb-12">
+        <h2 className="text-2xl font-bold text-text dark:text-text-dark mb-6 text-center">Learn About Percentages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {articles.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/${article.slug}`}
+              className="card group hover:border-primary dark:hover:border-primary-light transition-all duration-200"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <h3 className="text-lg font-bold text-text dark:text-text-dark mb-2 group-hover:text-primary transition-colors">
+                {article.title}
+              </h3>
+              <p className="text-sm text-text-light dark:text-text-dark-muted">{article.description}</p>
+              <span className="inline-block mt-3 text-sm font-semibold text-primary group-hover:underline">
+                Read Guide →
+              </span>
+            </Link>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+
+      {/* Privacy Note */}
+      <section className="text-center mt-12 card bg-primary/5 dark:bg-primary/10 border-primary/20">
+        <p className="text-lg font-semibold text-text dark:text-text-dark mb-2">🔒 100% Private & Secure</p>
+        <p className="text-text-light dark:text-text-dark-muted">
+          All calculations happen entirely in your browser. No data is ever sent to any server. No cookies, no tracking, no signup required.
+        </p>
+      </section>
     </div>
   );
 }
