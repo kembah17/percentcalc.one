@@ -3,25 +3,25 @@ import { tools } from "@/lib/tools-data";
 
 export default function Footer() {
   return (
-    <footer className="bg-surface dark:bg-surface-dark border-t border-border dark:border-border-dark mt-16">
+    <footer style={{ backgroundColor: 'var(--color-footer-bg)', color: 'var(--color-footer-text)' }} className="mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
               <span className="text-2xl">%</span>
-              <span className="text-lg font-bold text-primary">percentcalc<span className="text-text dark:text-text-dark">.one</span></span>
+              <span className="text-lg font-bold" style={{ color: 'var(--color-footer-link)' }}>percentcalc<span style={{ color: 'var(--color-footer-text)' }}>.one</span></span>
             </Link>
-            <p className="text-sm text-text-light dark:text-text-dark-muted">
+            <p className="text-sm" style={{ color: 'var(--color-footer-muted)' }}>
               Free online percentage calculator suite. All calculations happen in your browser — no data is sent to any server.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-text dark:text-text-dark mb-3">Calculators</h3>
+            <h3 className="font-semibold mb-3" style={{ color: 'var(--color-footer-text)' }}>Calculators</h3>
             <ul className="space-y-2">
               {tools.map((tool) => (
                 <li key={tool.slug}>
-                  <Link href={`/${tool.slug}`} className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <Link href={`/${tool.slug}`} className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                     {tool.name}
                   </Link>
                 </li>
@@ -30,20 +30,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-text dark:text-text-dark mb-3">Guides</h3>
+            <h3 className="font-semibold mb-3" style={{ color: 'var(--color-footer-text)' }}>Guides</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/how-to-calculate-percentage" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/how-to-calculate-percentage" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   How to Calculate Percentage
                 </Link>
               </li>
               <li>
-                <Link href="/percentage-increase-decrease-formula" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/percentage-increase-decrease-formula" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   Percentage Increase/Decrease Formula
                 </Link>
               </li>
               <li>
-                <Link href="/how-to-convert-fractions-to-percentages" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/how-to-convert-fractions-to-percentages" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   Fractions to Percentages Guide
                 </Link>
               </li>
@@ -51,20 +51,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-text dark:text-text-dark mb-3">Legal</h3>
+            <h3 className="font-semibold mb-3" style={{ color: 'var(--color-footer-text)' }}>Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/about" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/privacy" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-sm text-text-light dark:text-text-dark-muted hover:text-primary dark:hover:text-primary-light transition-colors">
+                <Link href="/terms" className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
                   Terms of Service
                 </Link>
               </li>
@@ -72,8 +72,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border dark:border-border-dark mt-8 pt-8 text-center">
-          <p className="text-sm text-text-light dark:text-text-dark-muted">
+        <div className="mt-8 pt-8 text-center" style={{ borderTop: '1px solid var(--color-footer-border)' }}>
+          <p className="text-sm" style={{ color: 'var(--color-footer-muted)' }}>
             © {new Date().getFullYear()} percentcalc.one — Free Percentage Calculator Suite. All calculations are performed locally in your browser.
           </p>
         </div>
