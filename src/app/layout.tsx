@@ -3,10 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
+// GSC verification loaded from env
+const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+
 export const metadata: Metadata = {
+  ...(gscVerification && { verification: { google: gscVerification } }),
   title: {
     default: "Percentage Calculator - Free Online Math Calculator Suite | percentcalc.one",
     template: "%s | percentcalc.one",
@@ -52,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${inter.variable} font-sans`}>
+        <GoogleAnalytics />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
