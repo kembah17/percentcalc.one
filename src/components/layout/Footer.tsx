@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">%</span>
+              <span className="text-2xl">🔢</span>
               <span className="text-lg font-bold" style={{ color: 'var(--color-footer-link)' }}>percentcalc<span style={{ color: 'var(--color-footer-text)' }}>.one</span></span>
             </Link>
             <p className="text-sm" style={{ color: 'var(--color-footer-muted)' }}>
@@ -22,7 +22,7 @@ export default function Footer() {
               {tools.map((tool) => (
                 <li key={tool.slug}>
                   <Link href={`/${tool.slug}`} className="text-sm transition-colors" style={{ color: 'var(--color-footer-muted)' }}>
-                    {tool.name}
+                    {tool.icon} {tool.name}
                   </Link>
                 </li>
               ))}

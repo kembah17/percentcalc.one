@@ -1,60 +1,53 @@
 import Link from "next/link";
-import { tools, articles } from "@/lib/tools-data";
+import { articles } from "@/lib/tools-data";
 import AdSlot from "@/components/ui/AdSlot";
+import HomeToolGrid from "@/components/ui/HomeToolGrid";
 
 export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero */}
       <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-text dark:text-text-dark mb-4">
-          Free Online <span className="text-primary">Percentage Calculator</span> Suite
+        <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-text-heading)' }}>
+          Free Online <span style={{ color: 'var(--color-brand)' }}>Percentage Calculator</span> Suite
         </h1>
-        <p className="text-lg text-text-light dark:text-text-dark-muted max-w-2xl mx-auto">
+        <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--color-text-secondary)' }}>
           Calculate percentages, percentage change, percentage difference, convert fractions, and split tips — all free, all instant, all private. No signup required.
         </p>
       </section>
 
       {/* Tools Grid */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold text-text dark:text-text-dark mb-6 text-center">Percentage Calculators & Converters</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tools.map((tool) => (
-            <Link
-              key={tool.slug}
-              href={`/${tool.slug}`}
-              className="card group hover:border-primary dark:hover:border-primary-light transition-all duration-200 hover:-translate-y-1"
-            >
-              <div className="text-4xl mb-3">{tool.icon}</div>
-              <h3 className="text-xl font-bold text-text dark:text-text-dark mb-2 group-hover:text-primary transition-colors">
-                {tool.name}
-              </h3>
-              <p className="text-sm text-text-light dark:text-text-dark-muted">{tool.description}</p>
-              <span className="inline-block mt-4 text-sm font-semibold text-primary group-hover:underline">
-                Use Calculator →
-              </span>
-            </Link>
-          ))}
-        </div>
+        <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: 'var(--color-text-heading)' }}>Percentage Calculators & Converters</h2>
+        <HomeToolGrid />
       </section>
 
       <AdSlot label="Homepage Ad" />
 
       {/* Articles Section */}
       <section className="mt-16 mb-12">
-        <h2 className="text-2xl font-bold text-text dark:text-text-dark mb-6 text-center">Learn About Percentages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: 'var(--color-text-heading)' }}>Learn About Percentages</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
           {articles.map((article) => (
             <Link
               key={article.slug}
               href={`/${article.slug}`}
-              className="card group hover:border-primary dark:hover:border-primary-light transition-all duration-200"
+              style={{
+                display: 'block',
+                padding: '1.5rem',
+                borderRadius: '0.75rem',
+                textDecoration: 'none',
+                backgroundColor: 'var(--color-bg-card)',
+                border: '2px solid var(--color-border)',
+                boxShadow: 'var(--shadow-sm)',
+                transition: 'all 0.2s ease',
+              }}
             >
-              <h3 className="text-lg font-bold text-text dark:text-text-dark mb-2 group-hover:text-primary transition-colors">
+              <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-text-heading)', marginBottom: '0.5rem' }}>
                 {article.title}
               </h3>
-              <p className="text-sm text-text-light dark:text-text-dark-muted">{article.description}</p>
-              <span className="inline-block mt-3 text-sm font-semibold text-primary group-hover:underline">
+              <p style={{ fontSize: '0.875rem', color: 'var(--color-text-secondary)', lineHeight: 1.6, margin: 0 }}>{article.description}</p>
+              <span style={{ display: 'inline-block', marginTop: '0.75rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-brand)' }}>
                 Read Guide →
               </span>
             </Link>
@@ -63,9 +56,9 @@ export default function HomePage() {
       </section>
 
       {/* Privacy Note */}
-      <section className="text-center mt-12 card bg-primary/5 dark:bg-primary/10 border-primary/20">
-        <p className="text-lg font-semibold text-text dark:text-text-dark mb-2">🔒 100% Private & Secure</p>
-        <p className="text-text-light dark:text-text-dark-muted">
+      <section className="text-center mt-12" style={{ backgroundColor: 'var(--color-bg-card)', border: '2px solid var(--color-border)', borderRadius: '0.75rem', padding: '1.5rem' }}>
+        <p className="text-lg font-semibold mb-2" style={{ color: 'var(--color-text-heading)' }}>🔒 100% Private & Secure</p>
+        <p style={{ color: 'var(--color-text-secondary)' }}>
           All calculations happen entirely in your browser. No data is ever sent to any server. No cookies, no tracking, no signup required.
         </p>
       </section>
