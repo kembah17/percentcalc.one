@@ -23,9 +23,12 @@ export default function Header() {
     <header className="bg-surface dark:bg-surface-dark border-b border-border dark:border-border-dark sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl">%</span>
-            <span className="text-xl font-bold text-primary">percentcalc<span className="text-text dark:text-text-dark">.one</span></span>
+          <Link href="/" className="flex items-center gap-2" style={{ textDecoration: 'none' }}>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="var(--color-brand)"/>
+              <text x="18" y="25" textAnchor="middle" fill="white" fontSize="20" fontWeight="700" fontFamily="system-ui">%</text>
+            </svg>
+            <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-text-heading)' }}>percentcalc<span style={{ color: 'var(--color-brand)' }}>.one</span></span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">

@@ -7,8 +7,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🔢</span>
+            <Link href="/" className="flex items-center gap-2 mb-4" style={{ textDecoration: 'none' }}>
+              <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="8" fill="var(--color-brand)"/>
+                <text x="18" y="25" textAnchor="middle" fill="white" fontSize="20" fontWeight="700" fontFamily="system-ui">%</text>
+              </svg>
               <span className="text-lg font-bold" style={{ color: 'var(--color-footer-link)' }}>percentcalc<span style={{ color: 'var(--color-footer-text)' }}>.one</span></span>
             </Link>
             <p className="text-sm" style={{ color: 'var(--color-footer-muted)' }}>
