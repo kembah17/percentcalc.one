@@ -36,6 +36,8 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+
+  alternates: { canonical: 'https://percentcalc.one' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
