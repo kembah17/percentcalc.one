@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     siteName: "percentcalc.one",
     title: "Percentage Calculator - Free Online Math Calculator Suite",
     description: "Free online percentage calculator suite. Calculate percentages, percentage change, percentage difference, convert fractions to percentages, and split tips.",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Percent Calculator' }],
   },
   twitter: {
     card: "summary_large_image",
@@ -53,6 +54,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 } catch (e) {}
               })();
             `,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "PercentCalc.one",
+              "url": "https://percentcalc.one",
+              "description": "Free online percentage calculator tools. Calculate percentages, percentage change, percentage difference, and more."
+            })
           }}
         />
       </head>
