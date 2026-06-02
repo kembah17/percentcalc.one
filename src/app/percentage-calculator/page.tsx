@@ -14,7 +14,7 @@ export default function PercentageCalculatorPage() {
       <JsonLd
         name="Percentage Calculator"
         description="Calculate what is X% of Y, find what percent X is of Y, or determine X is Y% of what. Free online percentage calculator with step-by-step solutions."
-        url="https://percentcalc.one/percentage-calculator"
+        url="https://www.percentcalc.one/percentage-calculator"
       />
       <PercentageCalculator />
     </>

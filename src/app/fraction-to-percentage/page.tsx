@@ -14,7 +14,7 @@ export default function FractionToPercentagePage() {
       <JsonLd
         name="Fraction to Percentage Converter"
         description="Convert any fraction or mixed number to a percentage. Free online tool with step-by-step conversion and common fractions reference."
-        url="https://percentcalc.one/fraction-to-percentage"
+        url="https://www.percentcalc.one/fraction-to-percentage"
       />
       <FractionToPercentage />
     </>

@@ -14,7 +14,7 @@ export default function PercentageDifferencePage() {
       <JsonLd
         name="Percentage Difference Calculator"
         description="Calculate the percentage difference between two values with visual comparison and step-by-step formula."
-        url="https://percentcalc.one/percentage-difference"
+        url="https://www.percentcalc.one/percentage-difference"
       />
       <PercentageDifference />
     </>

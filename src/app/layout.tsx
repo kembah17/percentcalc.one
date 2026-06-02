@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     template: "%s | percentcalc.one",
   },
   description: "Free online percentage calculator suite. Calculate percentages, percentage change, percentage difference, convert fractions to percentages, and split tips. 100% free, no signup required.",
-  metadataBase: new URL("https://percentcalc.one"),
+  metadataBase: new URL("https://www.percentcalc.one"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://percentcalc.one",
+    url: "https://www.percentcalc.one",
     siteName: "percentcalc.one",
     title: "Percentage Calculator - Free Online Math Calculator Suite",
     description: "Free online percentage calculator suite. Calculate percentages, percentage change, percentage difference, convert fractions to percentages, and split tips.",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  alternates: { canonical: 'https://percentcalc.one' },
+  alternates: { canonical: 'https://www.percentcalc.one' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "PercentCalc.one",
-              "url": "https://percentcalc.one",
+              "url": "https://www.percentcalc.one",
               "description": "Free online percentage calculator tools. Calculate percentages, percentage change, percentage difference, and more."
             })
           }}

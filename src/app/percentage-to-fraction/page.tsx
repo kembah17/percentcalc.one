@@ -14,7 +14,7 @@ export default function PercentageToFractionPage() {
       <JsonLd
         name="Percentage to Fraction Converter"
         description="Convert any percentage to a simplified fraction. Shows GCD simplification steps and handles repeating decimals."
-        url="https://percentcalc.one/percentage-to-fraction"
+        url="https://www.percentcalc.one/percentage-to-fraction"
       />
       <PercentageToFraction />
     </>
