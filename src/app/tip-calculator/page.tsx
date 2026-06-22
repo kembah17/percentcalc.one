@@ -14,7 +14,7 @@ export default function TipCalculatorPage() {
       <JsonLd
         name="Tip Calculator"
         description="Calculate tips and split bills easily. Preset tip percentages, per-person splitting, and rounding options."
-        url="https://www.percentcalc.one/tip-calculator"
+        url="https://percentcalc.one/tip-calculator"
       />
       <TipCalculator />
     </>

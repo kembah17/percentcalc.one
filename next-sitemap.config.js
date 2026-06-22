@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.percentcalc.one',
+  siteUrl: 'https://percentcalc.one',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   outDir: './out',

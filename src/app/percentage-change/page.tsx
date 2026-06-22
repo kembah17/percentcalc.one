@@ -14,7 +14,7 @@ export default function PercentageChangePage() {
       <JsonLd
         name="Percentage Increase/Decrease Calculator"
         description="Calculate percentage increase or decrease between two values. Free online tool with step-by-step solutions."
-        url="https://www.percentcalc.one/percentage-change"
+        url="https://percentcalc.one/percentage-change"
       />
       <PercentageChange />
     </>
